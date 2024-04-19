@@ -1,7 +1,11 @@
+using File_upload.Interfaces;
+using File_upload.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IBufferedFileUploadService, BufferedFileUploadLocalService>();
 
 var app = builder.Build();
 
