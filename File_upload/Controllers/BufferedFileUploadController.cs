@@ -21,7 +21,10 @@ namespace File_upload.Controllers
                 {
                     ViewBag.Message = "File Upload Successful.";
                 }
-                ViewBag.Message = "File Upload Failed";
+                else
+                {
+                    ViewBag.Message = "File Upload Failed";
+                }
             }
             catch (Exception) { ViewBag.Message = "File Upload Failed"; }
             return View();

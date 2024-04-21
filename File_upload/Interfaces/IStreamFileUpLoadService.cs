@@ -2,7 +2,7 @@
 
 namespace File_upload.Interfaces;
 
-public interface IStreamFileUpLoadService
+public interface IStreamFileUploadService
 {
     Task<bool> UploadFile(MultipartReader reader, MultipartSection section); 
 }
